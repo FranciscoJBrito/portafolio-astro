@@ -1,5 +1,5 @@
 ---
-
+import Header from '../components/Header/header.astro';
 ---
 
 <html lang="en">
@@ -10,7 +10,10 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Fran.dev</title>
 	</head>
-	<body>
-		<h1>Portafolio de Fran</h1>
-	</body>
+	<div class="flex flex-col items-center justify-start bg-bg-black min-h-screen p-5 text-white">
+		<Header />
+		<body>
+			
+		</body>		
+	</div>
 </html>
