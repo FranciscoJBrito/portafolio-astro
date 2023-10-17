@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header/header.astro';
+import InfoContainer from '../components/InfoContainer/infoContainer.astro'
 ---
 
 <html lang="en">
@@ -10,10 +11,25 @@ import Header from '../components/Header/header.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>Fran.dev</title>
 	</head>
-	<div class="flex flex-col items-center justify-start bg-bg-black min-h-screen p-5 text-white">
+	<div class="flex flex-col items-center justify-start bg-bg-black min-h-screen p-6 text-white">
 		<Header />
 		<body>
-			
+			{/*Hero section*/}
+			<div class="flex w-[1200px] justify-around px-6 py-8 items-center mt-[8vh] border-[1p] border-border-deep-green bg-bg-deep-green rounded-lg">
+				<div class="flex flex-col justify-center items-start">
+					<h2 class="text-xl text-primary-green">Carta de presentación para vacante como</h2>
+					<br>
+					<h1 class="text-6xl font-semibold ">Full-Stack <br>Software Engineer</h1>
+				</div>
+				<img src="/profile-image.jpeg" alt="foto" class="w-[30%] rounded-lg">
+			</div>
+			{/*Personal Info section*/}
+			<div class="flex justify-between items-center w-[1200px]">
+				<InfoContainer 
+					title="Sobre mi"
+					body=""
+				/>
+			</div>
 		</body>		
 	</div>
 </html>
