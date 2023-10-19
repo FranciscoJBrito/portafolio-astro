@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+import preline from 'preline/plugin.js'
+
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	content: [
+		'./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}', 
+		'node_modules/preline/dist/*.js', 
+	],
 	theme: {
 		fontFamily: {
-			sans:['Raleway','sans-serif']
+			sans:['alfabet','sans-serif']
 		},
 		colors: {
 			white: {
@@ -25,5 +30,7 @@ export default {
 		extend: {
 		}
 	},
-	plugins: [],
+	plugins: [
+		preline,
+	],
 }

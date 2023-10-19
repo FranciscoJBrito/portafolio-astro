@@ -1,9 +1,151 @@
 ---
- const { title, body } = Astro.props
+
 ---
 
-<div class="flex flex-col justify-center items-center border-[1px] border-border-deep-green bg-bg-deep-green rounded-lg p-5">
-      <h2>{title}</h2>
-      <br>
-      <p>{body}</p>
+{
+  /*
+<div
+  class="flex flex-col justify-start items-center border-[1px] border-white/5 bg-bg-deep-green rounded-3xl p-5 w-[95%] h-[90%] m-4"
+>
+  <h2 class="text-xl text-primary-green">{title}</h2>
+  <br />
+  <p class="text-base">{body}</p>
+
+</div>
+*/
+}
+
+<!-- Features -->
+<div class="max-w-[1200px] flex items-center justify-center bg-white/5 w-full border-[1px] py-4 border-border-deep-green rounded-lg">
+  <!-- Tab Nav -->
+  <nav
+    class="max-w-6xl grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4"
+    aria-label="Tabs"
+    role="tablist"
+  >
+    <button
+      type="button"
+      class="hs-tab-active:bg-gray-100 hs-tab-active:hover:border-transparent text-center md:text-left hover:bg-gray-100 p-3 md:p-5 rounded-xl dark:hs-tab-active:bg-white/[.05] dark:hover:bg-gray-700 active"
+      id="tabs-with-card-item-1"
+      data-hs-tab="#tabs-with-card-1"
+      aria-controls="tabs-with-card-1"
+      role="tab"
+    >
+      <span class="md:flex">
+        <span class="md:grow md:ml-5">
+          <span
+            class="hs-tab-active:text-primary-green block font-semibold text-white/60 text-center"
+            >Hola Easy Broker</span
+          >
+        </span>
+      </span>
+
+      <button
+        type="button"
+        class="hs-tab-active:bg-gray-100 hs-tab-active:hover:border-transparent text-center md:text-left hover:bg-gray-100 p-3 md:p-5 rounded-xl dark:hs-tab-active:bg-white/[.05] dark:hover:bg-gray-700"
+        id="tabs-with-card-item-2"
+        data-hs-tab="#tabs-with-card-2"
+        aria-controls="tabs-with-card-2"
+        role="tab"
+      >
+        <span class="md:flex">
+          <span class="md:grow md:ml-5">
+            <span
+              class="hs-tab-active:text-primary-green block font-semibold text-white/60 text-center"
+              >¿Por qué sumarme a su equipo?</span
+            >
+          </span>
+        </span>
+
+        <button
+          type="button"
+          class="hs-tab-active:bg-gray-100 hs-tab-active:hover:border-transparent text-center md:text-left hover:bg-gray-100 p-3 md:p-5 rounded-xl dark:hs-tab-active:bg-white/[.05] dark:hover:bg-gray-700"
+          id="tabs-with-card-item-3"
+          data-hs-tab="#tabs-with-card-3"
+          aria-controls="tabs-with-card-3"
+          role="tab"
+        >
+          <span class="md:flex">
+            <span class="md:grow md:ml-5">
+              <span
+                class="hs-tab-active:text-primary-green block font-semibold text-white/60 text-center"
+                >Mi encuentro con EasyBroker</span
+              >
+            </span>
+          </span>
+        </button>
+      </button>
+      <!-- End Tab Nav -->
+
+      <!-- Tab Content -->
+      <div class="col-span-3 bg-bg-deep-green border-[1px] border-white/5 rounded-lg w-full px-24  py-14 md:mt-0 ">
+        <!-- Tab 1 Content -->
+        <div
+          id="tabs-with-card-1"
+          role="tabpanel"
+          aria-labelledby="tabs-with-card-item-1"
+        >
+          <div class="relative">
+            <div class="text-center bg-gray-800 rounded-b-lg w-full">
+              <p>
+                Soy Francisco Brito, un ingeniero de software argentino de 23
+                años con una pasión innata por la tecnología y el aprendizaje
+                continuo. Me siento motivado por la oportunidad de ayudar a
+                otros y seguir creciendo como persona y profesional. Siempre
+                estoy dispuesto y entusiasmado por aprender de otros y compartir
+                mi conocimiento.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2 Content -->
+        <div
+          id="tabs-with-card-2"
+          class="hidden"
+          role="tabpanel"
+          aria-labelledby="tabs-with-card-item-2"
+        >
+          <div class="relative">
+            <div class="text-center bg-gray-800 rounded-b-lg w-full">
+              <p>
+                Considero que lo que me distingue es mi perseverancia
+                inquebrantable y mi deseo constante de superar mis límites.
+                Tengo una capacidad de aprendizaje excepcional que me ha
+                permitido adquirir conocimientos en ingeniería de software de
+                manera autodidacta, complementados con valiosa experiencia
+                laboral. Mi enfoque proactivo y mi habilidad para el analizis y
+                resolucion de problemas han sido fundamentales en mi desarrollo.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="tabs-with-card-3"
+          class="hidden"
+          role="tabpanel"
+          aria-labelledby="tabs-with-card-item-3"
+        >
+          <div class="relative">
+            <div class="text-center bg-gray-800 rounded-b-lg w-full">
+              <p>
+                Conocí Easy Broker en mi antiguo trabajo, ya que varios de
+                nuestros clientes usaban su plataforma para gestionar sus
+                inmuebles. Después de leer algunos de sus artículos en su blog,
+                me fascinó su cultura de trabajo, así que decidí postularme por
+                primera vez. Sin embargo, gracias al feedback que recibí, me di
+                cuenta de que me faltaban conocimientos para el puesto. Ahora,
+                un mes y medio después, y después de haberme propuesto aprender
+                todo lo que sea necesario, estoy realizando mi segunda
+                postulación.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Tab Content -->
+    </button>
+    <!-- End Features -->
+  </nav>
 </div>

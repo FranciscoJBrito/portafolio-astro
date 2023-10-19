@@ -3,33 +3,51 @@ import Header from '../components/Header/header.astro';
 import InfoContainer from '../components/InfoContainer/infoContainer.astro'
 ---
 
-<html lang="en">
+<html lang="en" class="bg-bg-black scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="https://use.typekit.net/qxr0uet.css">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Fran.dev</title>
 	</head>
 	<div class="flex flex-col items-center justify-start bg-bg-black min-h-screen p-6 text-white">
+		<div id="bg" class="z-0 w-full h-full fixed"></div>
 		<Header />
 		<body>
 			{/*Hero section*/}
-			<div class="flex w-[1200px] justify-around px-6 py-8 items-center mt-[8vh] border-[1p] border-border-deep-green bg-bg-deep-green rounded-lg">
+			<div class="flex w-[1200px] z-10 justify-around px-6 py-8 items-center my-[8vh] border-[1px] border-white/5 bg-bg-deep-green rounded-3xl">
 				<div class="flex flex-col justify-center items-start">
 					<h2 class="text-xl text-primary-green">Carta de presentación para vacante como</h2>
 					<br>
 					<h1 class="text-6xl font-semibold ">Full-Stack <br>Software Engineer</h1>
 				</div>
-				<img src="/profile-image.jpeg" alt="foto" class="w-[30%] rounded-lg">
+				<img src="/profile-image.jpeg" alt="foto" class="w-[25%] rounded-3xl">
 			</div>
 			{/*Personal Info section*/}
-			<div class="flex justify-between items-center w-[1200px]">
-				<InfoContainer 
-					title="Sobre mi"
-					body=""
+			<div id="about" class="flex z-10 justify-between items-center w-[1200px]">
+				<InfoContainer />
+				
+				{/*<InfoContainer 
+					title="Mis metas"
+					body="Mi aspiración a largo plazo es fundar mi propia empresa en el campo de la robótica y la inteligencia artificial, contribuyendo en el desarrollo de la robótica avanzada."
 				/>
+
+				<InfoContainer 
+					title="¿Por qué sumarme a su equipo?"
+					body="Considero que lo que me distingue es mi perseverancia inquebrantable y mi deseo constante de superar mis límites. Tengo una capacidad de aprendizaje excepcional que me ha permitido adquirir conocimientos en ingeniería de software de manera autodidacta, complementados con valiosa experiencia laboral. Mi enfoque proactivo y mi habilidad para el analizis y resolucion de problemas han sido fundamentales en mi desarrollo."
+				/>
+
+				<InfoContainer 
+					title="Mi encuentro con EasyBroker"
+					body="Conocí Easy Broker en mi antiguo trabajo, ya que varios de nuestros clientes usaban su plataforma para gestionar sus inmuebles. Después de leer algunos de sus artículos en su blog, me fascinó su cultura de trabajo, así que decidí postularme por primera vez. Sin embargo, gracias al feedback que recibí, me di cuenta de que me faltaban conocimientos para el puesto. Ahora, un mes y medio después, y después de haberme propuesto aprender todo lo que sea necesario, estoy realizando mi segunda postulación."
+				/>
+				*/}
 			</div>
+			<script type="text/javascript" src="../../lib/particles.min.js"></script>
+			<script type="text/javascript" src="../../lib/custom.js"></script>
+			<script is:inline src="./node_modules/preline/dist/preline.js"></script>
 		</body>		
 	</div>
 </html>
