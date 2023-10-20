@@ -1,6 +1,9 @@
 ---
 import Header from '../components/Header/header.astro';
 import InfoContainer from '../components/InfoContainer/infoContainer.astro'
+import Tecnologias from '../components/Tecnologias/tecnologias.astro'
+import '../styles/global.css'
+import Proyectos from '../components/Proyectos/proyectos.astro'
 ---
 
 <html lang="en" class="bg-bg-black scroll-smooth">
@@ -17,7 +20,7 @@ import InfoContainer from '../components/InfoContainer/infoContainer.astro'
 		<Header />
 		<body>
 			{/*Hero section*/}
-			<div class="flex w-[1200px] z-10 justify-around px-6 py-8 items-center my-[8vh] border-[1px] border-white/5 bg-bg-deep-green rounded-3xl">
+			<div class="flex w-[1200px] z-10 justify-around px-6 py-8 items-center my-[10vh] mt-[14vh] border-[1px] border-white/5 bg-bg-deep-green rounded-3xl">
 				<div class="flex flex-col justify-center items-start">
 					<h2 class="text-xl text-primary-green">Carta de presentación para vacante como</h2>
 					<br>
@@ -26,24 +29,23 @@ import InfoContainer from '../components/InfoContainer/infoContainer.astro'
 				<img src="/profile-image.jpeg" alt="foto" class="w-[25%] rounded-3xl">
 			</div>
 			{/*Personal Info section*/}
-			<div id="about" class="flex z-10 justify-between items-center w-[1200px]">
+			<div id="about" class="flex z-10 flex-col justify-between items-center w-[1200px]">
 				<InfoContainer />
-				
-				{/*<InfoContainer 
-					title="Mis metas"
-					body="Mi aspiración a largo plazo es fundar mi propia empresa en el campo de la robótica y la inteligencia artificial, contribuyendo en el desarrollo de la robótica avanzada."
-				/>
+			</div>
+			{/*Tecnologias*/}
+			<div class="my-[10vh]">
+				<h2 class="text-4xl font-semibold text-center">Tecnologías</h2>
+				<br>
+				<br>
+				<Tecnologias />
+			</div>
 
-				<InfoContainer 
-					title="¿Por qué sumarme a su equipo?"
-					body="Considero que lo que me distingue es mi perseverancia inquebrantable y mi deseo constante de superar mis límites. Tengo una capacidad de aprendizaje excepcional que me ha permitido adquirir conocimientos en ingeniería de software de manera autodidacta, complementados con valiosa experiencia laboral. Mi enfoque proactivo y mi habilidad para el analizis y resolucion de problemas han sido fundamentales en mi desarrollo."
-				/>
-
-				<InfoContainer 
-					title="Mi encuentro con EasyBroker"
-					body="Conocí Easy Broker en mi antiguo trabajo, ya que varios de nuestros clientes usaban su plataforma para gestionar sus inmuebles. Después de leer algunos de sus artículos en su blog, me fascinó su cultura de trabajo, así que decidí postularme por primera vez. Sin embargo, gracias al feedback que recibí, me di cuenta de que me faltaban conocimientos para el puesto. Ahora, un mes y medio después, y después de haberme propuesto aprender todo lo que sea necesario, estoy realizando mi segunda postulación."
-				/>
-				*/}
+			{/*Proyectos*/}
+			<div id="proyectos" class="z-10">
+				<h2 class="text-4xl font-semibold text-center">Proyectos</h2>
+				<br>
+				<br>
+				<Proyectos />
 			</div>
 			<script type="text/javascript" src="../../lib/particles.min.js"></script>
 			<script type="text/javascript" src="../../lib/custom.js"></script>
