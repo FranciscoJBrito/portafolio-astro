@@ -4,6 +4,7 @@ import InfoContainer from '../components/InfoContainer/infoContainer.astro'
 import Tecnologias from '../components/Tecnologias/tecnologias.astro'
 import '../styles/global.css'
 import Proyectos from '../components/Proyectos/proyectos.astro'
+import Testimonials from '../components/Testimonials/testimonials.astro'
 ---
 
 <html lang="en" class="bg-bg-black scroll-smooth">
@@ -15,7 +16,7 @@ import Proyectos from '../components/Proyectos/proyectos.astro'
 		<meta name="generator" content={Astro.generator} />
 		<title>Fran.dev</title>
 	</head>
-	<div class="flex flex-col items-center justify-start bg-bg-black min-h-screen p-6 text-white">
+	<div class="flex flex-col items-center justify-start bg-bg-black min-h-screen p-6 pt-0 text-white">
 		<div id="bg" class="z-0 w-full h-full fixed"></div>
 		<Header />
 		<body>
@@ -46,6 +47,11 @@ import Proyectos from '../components/Proyectos/proyectos.astro'
 				<br>
 				<br>
 				<Proyectos />
+			</div>
+
+			{/*Testimonios*/}
+			<div class="my-[10vh]">
+				<Testimonials />
 			</div>
 			<script type="text/javascript" src="../../lib/particles.min.js"></script>
 			<script type="text/javascript" src="../../lib/custom.js"></script>
