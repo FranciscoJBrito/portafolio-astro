@@ -1,20 +1,10 @@
 ---
-const { title, description, github_link, view_project } = Astro.props
+const { title, description, github_link, view_project, path } = Astro.props
 ---
 
 <div class="group flex flex-col h-full bg-bg-deep-green border border-white/10 shadow-sm rounded-xl">
       <div class="h-52 flex flex-col justify-center items-center bg-blue-600 rounded-t-xl">
-        <svg class="w-28 h-28" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="56" height="56" rx="10" fill="white"/>
-          <path d="M20.2819 26.7478C20.1304 26.5495 19.9068 26.4194 19.6599 26.386C19.4131 26.3527 19.1631 26.4188 18.9647 26.5698C18.848 26.6622 18.7538 26.78 18.6894 26.9144L10.6019 43.1439C10.4874 43.3739 10.4686 43.6401 10.5496 43.884C10.6307 44.1279 10.805 44.3295 11.0342 44.4446C11.1681 44.5126 11.3163 44.5478 11.4664 44.5473H22.7343C22.9148 44.5519 23.0927 44.5037 23.2462 44.4084C23.3998 44.3132 23.5223 44.1751 23.5988 44.011C26.0307 38.9724 24.5566 31.3118 20.2819 26.7478Z" fill="url(#paint0_linear_2204_541)"/>
-          <path d="M28.2171 11.9791C26.201 15.0912 25.026 18.6755 24.8074 22.3805C24.5889 26.0854 25.3342 29.7837 26.9704 33.1126L32.403 44.0113C32.4833 44.1724 32.6067 44.3079 32.7593 44.4026C32.912 44.4973 33.088 44.5475 33.2675 44.5476H44.5331C44.6602 44.5479 44.7861 44.523 44.9035 44.4743C45.0209 44.4257 45.1276 44.3543 45.2175 44.2642C45.3073 44.1741 45.3785 44.067 45.427 43.9492C45.4755 43.8314 45.5003 43.7052 45.5 43.5777C45.5001 43.4274 45.4659 43.2791 45.3999 43.1441L29.8619 11.9746C29.7881 11.8184 29.6717 11.6864 29.5261 11.594C29.3805 11.5016 29.2118 11.4525 29.0395 11.4525C28.8672 11.4525 28.6984 11.5016 28.5529 11.594C28.4073 11.6864 28.2908 11.8184 28.2171 11.9746V11.9791Z" fill="#2684FF"/>
-          <defs>
-          <linearGradient id="paint0_linear_2204_541" x1="24.734" y1="29.2284" x2="16.1543" y2="44.0429" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#0052CC"/>
-          <stop offset="0.92" stop-color="#2684FF"/>
-          </linearGradient>
-          </defs>
-        </svg>
+        <img src={path} class="w-full h-full object-fill rounded-t-xl"/>
       </div>
       <div class="p-4 md:p-6">
         <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:hover:text-white">
@@ -26,16 +16,10 @@ const { title, description, github_link, view_project } = Astro.props
       </div>
       <div class="mt-auto flex border-t border-white/10 divide-x divide-gray-200">
         <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-2 rounded-bl-xl font-medium bg-bg-deep-green text-white/80 border-white/10 shadow-sm align-middle focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm sm:p-4 cursor-pointer hover:bg-primary-green hover:text-bg-black" href={github_link} target="_blank">
-          Ver codigo
-          <div class="w-6 h-6 bg-white p-[2px] rounded  ">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="Github"><path d="M7.999 0C3.582 0 0 3.596 0 8.032a8.031 8.031 0 0 0 5.472 7.621c.4.074.546-.174.546-.387 0-.191-.007-.696-.011-1.366-2.225.485-2.695-1.077-2.695-1.077-.363-.928-.888-1.175-.888-1.175-.727-.498.054-.488.054-.488.803.057 1.225.828 1.225.828.714 1.227 1.873.873 2.329.667.072-.519.279-.873.508-1.074-1.776-.203-3.644-.892-3.644-3.969 0-.877.312-1.594.824-2.156-.083-.203-.357-1.02.078-2.125 0 0 .672-.216 2.2.823a7.633 7.633 0 0 1 2.003-.27 7.65 7.65 0 0 1 2.003.271c1.527-1.039 2.198-.823 2.198-.823.436 1.106.162 1.922.08 2.125.513.562.822 1.279.822 2.156 0 3.085-1.87 3.764-3.652 3.963.287.248.543.738.543 1.487 0 1.074-.01 1.94-.01 2.203 0 .215.144.465.55.386A8.032 8.032 0 0 0 16 8.032C16 3.596 12.418 0 7.999 0z"  fill="#000" class="color000000 svgShape"></path></svg>
-          </div>
+          Ver código
         </a>
         <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-2 rounded-br-xl font-medium bg-bg-deep-green text-white/80 border-white/10 shadow-sm align-middle focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm sm:p-4 cursor-pointer hover:bg-primary-green hover:text-bg-black" href={view_project} target="_blank">
           Ver Proyecto
-          <div class="w-6 h-6 bg-white p-[2px] rounded  ">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 470 468" id="internet" class="z-10"><defs><filter id="a" width="100%" height="100%" x="-5.9%" y="-3.9%" filterUnits="objectBoundingBox"><feOffset dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4"></feGaussianBlur><feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.078125 0"></feColorMatrix><feOffset dy="4" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset><feGaussianBlur in="shadowOffsetOuter2" result="shadowBlurOuter2" stdDeviation="5.5"></feGaussianBlur><feColorMatrix in="shadowBlurOuter2" result="shadowMatrixOuter2" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.210824275 0"></feColorMatrix><feMerge><feMergeNode in="shadowMatrixOuter1"></feMergeNode><feMergeNode in="shadowMatrixOuter2"></feMergeNode></feMerge></filter><path id="b" d="M9.635 132.808C24.782 59.782 71.388 19.109 144.085 6.822c53.74-9.081 107.5-9.196 161.15.255 74.852 13.185 119.85 56.23 134.185 130.36 11.075 57.29 11.249 115.191-.174 172.427-15.324 72.52-63.132 117.285-135.561 129.527-53.74 9.08-107.5 9.195-161.15-.255-74.852-13.186-120.05-58.38-134.384-132.509-11.64-57.668-10.52-115.935 1.484-173.82z"></path></defs><g fill="none" fill-rule="evenodd"><g transform="translate(-21 -26)"><g><g transform="translate(32 33)"><use fill="#000" filter="url(#a)" xlink:href="#b"></use><use fill="#706CF5" xlink:href="#b"></use></g><path fill="#FFF" d="M367.092 257.907c-1.943 7.32-9.9 12.583-22.292 15.743 5.596-12.596 9.257-26.233 10.657-40.536 9.24 8.913 13.583 17.455 11.635 24.793m-153.783 4.965c-41.598-11.042-77.605-26.335-101.378-41.787-.003-.329-.013-.657-.013-.987 0-61.91 50.189-112.098 112.099-112.098 61.91 0 112.098 50.188 112.098 112.098 0 20.75-5.646 40.176-15.475 56.842-28.18 1.398-66.426-3.21-107.331-14.068M82.235 182.29c1.864-7.022 9.28-12.143 20.819-15.337a131.248 131.248 0 0 0-10.378 38.975c-8.43-8.496-12.305-16.617-10.441-23.638M224.017 88c69.935 0 127.169 54.35 131.788 123.115 22.069 17.721 33.394 36.296 29.165 52.229-4.253 16.019-23.48 26.563-51.68 30.964-.143.213-15.666 2.197-24.56 2.203-29.321.942-64.602-3.232-101.502-13.027-88.943-23.611-153.572-70.908-144.352-105.641 4.224-15.914 23.228-26.421 51.123-30.874C137.673 111.425 178.107 88 224.017 88zm58.827 227.531c11.572.633 22.517.586 32.63-.121-23.735 22.782-55.96 36.787-91.457 36.787-61.18 0-112.636-41.593-127.658-98.042 8.214 6.013 17.642 11.887 28.09 17.483 18.66 35.976 56.24 60.559 99.568 60.559 21.577 0 41.726-6.102 58.827-16.666z" transform="translate(32 33)"></path></g></g></g></svg>
-          </div>
         </a>
       </div>
     </div>
