@@ -6,6 +6,9 @@ import '../styles/global.css'
 import Proyectos from '../components/Proyectos/proyectos.astro'
 import Testimonials from '../components/Testimonials/testimonials.astro'
 import EmbedLooms from '../components/Looms/embedLooms.astro'
+//import '../../lib/custom.js'
+//import '../../lib/particles.min.js'
+//import "./node_modules/preline/dist/preline.js"
 ---
 
 <html lang="en" class="bg-bg-black scroll-smooth">
@@ -66,8 +69,8 @@ import EmbedLooms from '../components/Looms/embedLooms.astro'
 				<EmbedLooms />
 			</div>
 
-			<script is:inline src="../../lib/particles.min.js"></script>
-			<script is:inline src="../../lib/custom.js"></script>
+			<script src="../scripts/particles.min.js"></script>
+			<script src="../scripts/custom.js"></script>
 			<script is:inline src="./node_modules/preline/dist/preline.js"></script>
 		</body>		
 	</div>
