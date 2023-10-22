@@ -5,6 +5,7 @@ import Tecnologias from '../components/Tecnologias/tecnologias.astro'
 import '../styles/global.css'
 import Proyectos from '../components/Proyectos/proyectos.astro'
 import Testimonials from '../components/Testimonials/testimonials.astro'
+import EmbedLooms from '../components/Looms/embedLooms.astro'
 ---
 
 <html lang="en" class="bg-bg-black scroll-smooth">
@@ -34,7 +35,7 @@ import Testimonials from '../components/Testimonials/testimonials.astro'
 				<InfoContainer />
 			</div>
 			{/*Tecnologias*/}
-			<div class="my-[10vh]">
+			<div id="tecnologias" class="my-[10vh]">
 				<h2 class="text-4xl font-semibold text-center">Tecnologías</h2>
 				<br>
 				<br>
@@ -50,9 +51,21 @@ import Testimonials from '../components/Testimonials/testimonials.astro'
 			</div>
 
 			{/*Testimonios*/}
-			<div class="my-[10vh]">
+			<div id="testimonios" class="my-[10vh] z-10">
+				<h2 class="text-4xl font-semibold text-center">Testimonios</h2>
+				<br>
+				<br>
 				<Testimonials />
 			</div>
+
+			{/*Videos*/}
+			<div class="z-10">
+				<h2 class="text-4xl font-semibold text-center">Videos</h2>
+				<br>
+				<br>
+				<EmbedLooms />
+			</div>
+
 			<script type="text/javascript" src="../../lib/particles.min.js"></script>
 			<script type="text/javascript" src="../../lib/custom.js"></script>
 			<script is:inline src="./node_modules/preline/dist/preline.js"></script>
