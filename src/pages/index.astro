@@ -6,9 +6,6 @@ import '../styles/global.css'
 import Proyectos from '../components/Proyectos/proyectos.astro'
 import Testimonials from '../components/Testimonials/testimonials.astro'
 import EmbedLooms from '../components/Looms/embedLooms.astro'
-//import '../../lib/custom.js'
-//import '../../lib/particles.min.js'
-//import "./node_modules/preline/dist/preline.js"
 ---
 
 <html lang="en" class="bg-bg-black scroll-smooth">
@@ -21,11 +18,11 @@ import EmbedLooms from '../components/Looms/embedLooms.astro'
 		<title>Fran.dev</title>
 	</head>
 	<div class="flex flex-col items-center justify-start bg-bg-black min-h-screen p-6 pt-0 text-white">
-		<div id="bg" class="z-0 w-full h-full fixed"></div>
+		<div id="bg" class="z-0 w-[100vw] h-full fixed"></div>
 		<Header />
 		<body>
 			{/*Hero section*/}
-			<div class="flex w-[1200px] z-10 justify-around px-6 py-8 items-center my-[10vh] mt-[14vh] border-[1px] border-white/5 bg-bg-deep-green rounded-3xl">
+			<div class="flex lg:w-[1200px] sm:w-full z-10 justify-around px-6 py-8 items-center my-[10vh] mt-[14vh] border-[1px] border-white/5 bg-bg-deep-green rounded-3xl">
 				<div class="flex flex-col justify-center items-start">
 					<h2 class="text-xl text-primary-green">Carta de presentación para vacante como</h2>
 					<br>
@@ -34,7 +31,7 @@ import EmbedLooms from '../components/Looms/embedLooms.astro'
 				<img src="/profile-image.jpeg" alt="foto" class="w-[25%] rounded-3xl">
 			</div>
 			{/*Personal Info section*/}
-			<div id="about" class="flex z-10 flex-col justify-between items-center w-[1200px]">
+			<div id="about" class="flex z-10 flex-col justify-between items-center lg:w-[1200px] sm:w-auto">
 				<InfoContainer />
 			</div>
 			{/*Tecnologias*/}
@@ -62,7 +59,7 @@ import EmbedLooms from '../components/Looms/embedLooms.astro'
 			</div>
 
 			{/*Videos*/}
-			<div class="z-10">
+			<div class="z-10 lg:w-[1200px] w-auto">
 				<h2 class="text-4xl font-semibold text-center">Videos</h2>
 				<br>
 				<br>
@@ -72,9 +69,6 @@ import EmbedLooms from '../components/Looms/embedLooms.astro'
 
 			<script is:inline src="/particles.min.js" />
 			<script is:inline src="/custom.js"></script>
-			{/*<script is:inline src="./node_modules/preline/dist/preline.js">
-				import 'preline'
-			</script>*/}
 			<script>
 				import 'preline'
 			</script>
