@@ -69,12 +69,10 @@ import EmbedLooms from '../components/Looms/embedLooms.astro'
 				<EmbedLooms />
 			</div>
 
-			<script>
-				console.log("mensaje desde la consola")
-			</script>
-			{/*<script src="./particles.min.js" />
-			<script src="./scripts/custom.js"></script>
-		<script is:inline src="./node_modules/preline/dist/preline.js"></script>*/}
+
+			<script is:inline src="/particles.min.js" />
+			<script is:inline src="/custom.js"></script>
+			<script is:inline src="./node_modules/preline/dist/preline.js"></script>
 		</body>		
 	</div>
 </html>
