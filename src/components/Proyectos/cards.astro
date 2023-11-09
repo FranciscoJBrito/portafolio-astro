@@ -1,12 +1,24 @@
 ---
-const { title, description, github_link, view_project, path } = Astro.props
+const { title, description, github_link, view_project, path, comingSoon, finished, notFinished, tag } = Astro.props
+const finishedStyle ='py-1.5 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium text-white  rounded-full bg-green/40 border-[1px] border-green'
+const notFinishedStyle ='py-1.5 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium text-white  rounded-full bg-red/40 border-[1px] border-red'
+const comingSoonStyle ='py-1.5 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium text-white  rounded-full bg-orange/40 border-[1px] border-orange'
 ---
 
 <div class="group flex flex-col h-full bg-bg-deep-green border border-white/10 shadow-sm rounded-xl">
+
       <div class="h-52 flex flex-col justify-center items-center bg-blue-600 rounded-t-xl">
         <img src={path} class="w-full h-full object-fill rounded-t-xl"/>
       </div>
-      <div class="p-4 md:p-6">
+      <div class="p-4 md:p-6 relative">
+        <div class="absolute top-5 right-2">
+          <span class={finished ? finishedStyle : comingSoon ? comingSoonStyle : notFinished ? notFinishedStyle : null}>
+            <svg class="w-2.5 h-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill={finished ? '#4CFA2F' : comingSoon ? '#F99B16' : notFinished ? '#FA2F2F' : null} viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </svg>
+            {tag}
+          </span>
+        </div>
         <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:hover:text-white">
           {title}
         </h3>

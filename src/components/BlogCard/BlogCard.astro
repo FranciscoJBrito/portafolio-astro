@@ -1,0 +1,37 @@
+---
+const {title, url, fecha} = Astro.props
+---
+
+<!-- Card Blog -->
+<div class="flex flex-col justify-start items-center w-full sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <!-- Card -->
+        <a class="lg:w-[50%] w-full h-[400px] bg-border-deep-green  relative block rounded-xl" href={url}>
+          <div class="flex-shrink-0 relative rounded-xl overflow-hidden w-full h-full">
+            <img class="w-full h-full absolute top-0 start-0 object-cover " src="/PM-app-banner-blog.png" alt="project managment app">
+          </div>
+    
+          <div class="absolute top-0 inset-x-0 z-10">
+            <div class="p-4 flex flex-col h-full sm:p-6">
+              <!-- Avatar -->
+              <div class="flex items-center">
+                <div class="ms-2.5 sm:ms-4">
+                  <p class="text-xs text-white/[.8]">
+                    {fecha}
+                  </p>
+                </div>
+              </div>
+              <!-- End Avatar -->
+            </div>
+          </div>
+    
+          <div class="absolute bottom-0 inset-x-0 z-10">
+            <div class="flex flex-col h-full p-4 sm:p-6">
+              <h3 class="text-lg sm:text-3xl font-semibold text-white group-hover:text-white/[.8]">
+                {title}
+              </h3>
+            </div>
+          </div>
+        </a>
+        <!-- End Card -->
+    </div>
+    <!-- End Card Blog -->

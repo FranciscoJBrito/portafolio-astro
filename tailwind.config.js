@@ -8,14 +8,9 @@ export default {
 	],
 	theme: {
 		fontFamily: {
-			sans:['alfabet','sans-serif']
+			sans:['alfabet','sans-serif'],
 		},
 		colors: {
-			white: {
-				light: '#ffffff',
-				DEFAULT: '#FFFFFF',
-				dark: '#ffffff',
-			},
 			'gray-border': '#f8fafc0f',
 			'slate-900': '#0f172a',
 			'blue': '#0e8eff',
@@ -25,12 +20,17 @@ export default {
 			'bg-deep-green': '#171717',
 			'primary-green': '#b1fa93',
 			'auxiliary-green': '#263023',
-			'bg-black': '#0a0a0a'
+			'bg-black': '#0a0a0a',
+			'orange': '#F99B16',
+			'white': '#fff',
+			'red': '#FA2F2F',
+			'green': '#4CFA2F'
 		},
 		extend: {
-		}
+		},
 	},
 	plugins: [
 		preline,
+		require('@tailwindcss/typography'),
 	],
 }

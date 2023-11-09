@@ -1,82 +1,57 @@
 ---
-import InfoContainer from '../components/InfoContainer/infoContainer.astro'
-import Tecnologias from '../components/Tecnologias/tecnologias.astro'
-import '../styles/global.css'
-import Proyectos from '../components/Proyectos/proyectos.astro'
-import Testimonials from '../components/Testimonials/testimonials.astro'
-import EmbedLooms from '../components/Looms/embedLooms.astro'
-import NavBar from '../components/NavBar/navBar.astro'
+import InfoContainer from "../components/InfoContainer/infoContainer.astro";
+import Tecnologias from "../components/Tecnologias/tecnologias.astro";
+import "../styles/global.css";
+import Proyectos from "../components/Proyectos/proyectos.astro";
+import Testimonials from "../components/Testimonials/testimonials.astro";
+import Layout from "../layout/Layout.astro";
+import NavBar from "../components/NavBar/navBar.astro";
 ---
 
-<html lang="en" class="bg-bg-black scroll-smooth">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-		<link rel="stylesheet" href="https://use.typekit.net/qxr0uet.css">
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Fran.dev</title>
-	</head>
-	<div class="flex flex-col items-center justify-start bg-bg-black min-h-screen p-6 pt-0 text-white">
-		<div id="bg" class="z-0 w-[100vw] h-full fixed"></div>
-		<NavBar />
-		<body>
-			{/*Hero section*/}
-			<div class="flex lg:flex-row flex-col lg:w-[1200px] w-full z-10 justify-around px-6 py-8 items-center my-[10vh] mt-[14vh] border-[1px] border-white/5 bg-bg-deep-green rounded-3xl">
-				<div class="flex flex-col justify-center items-start">
-					<h2 class="text-xl text-primary-green">Portafolio personal</h2>
-					<br>
-					<h1 class="text-6xl font-semibold ">Full-Stack <br>Software Engineer</h1>
-				</div>
-				<img src="/profile-image.jpeg" alt="foto" class="lg:w-[25%] w-full lg:mt-0 mt-10 rounded-3xl">
-			</div>
-			{/*Personal Info section*/}
-			<div id="about" class="flex z-10 flex-col justify-between items-center lg:w-[1200px] sm:w-auto">
-				<InfoContainer />
-			</div>
-			{/*Tecnologias*/}
-			<div id="tecnologias" class="my-[10vh]">
-				<h2 class="text-4xl font-semibold text-center">Tecnologías</h2>
-				<br>
-				<br>
-				<Tecnologias />
-			</div>
+<Layout title="Inicio">
+  {/*Hero section*/}
+  <div
+    class="flex lg:flex-row flex-col lg:w-[1200px] w-full z-10 justify-around px-6 py-8 items-center mb-[10vh] border-[1px] border-white/5 bg-bg-deep-green rounded-3xl"
+  >
+    <div class="flex flex-col justify-center items-start">
+      <h2 class="text-xl text-primary-green">Portafolio personal</h2>
+      <br />
+      <h1 class="text-6xl font-semibold">Full-Stack <br />Software Engineer</h1>
+    </div>
+    <img
+      src="/profile-image.jpeg"
+      alt="foto"
+      class="lg:w-[25%] w-full lg:mt-0 mt-10 rounded-3xl"
+    />
+  </div>
+  {/*Personal Info section*/}
+  <div
+    id="about"
+    class="flex z-10 flex-col justify-between items-center lg:w-[1200px] sm:w-auto"
+  >
+    <InfoContainer />
+  </div>
+  {/*Tecnologias*/}
+  <div id="tecnologias" class="my-[10vh]">
+    <h2 class="text-4xl font-semibold text-center">Tecnologías</h2>
+    <br />
+    <br />
+    <Tecnologias />
+  </div>
 
-			{/*Videos*/}
-			<!-- <div class="z-10 lg:w-[1200px] w-auto">
-				<h2 class="text-4xl font-semibold text-center">Videos</h2>
-				<br>
-				<br>
-				<div class="lg:w-full w-auto grid lg:grid-cols-2 grid-cols-1 gap-6">
-					<EmbedLooms url="https://www.loom.com/embed/3cd789f72bdd48069221d210580f3a5b?sid=492b9c02-9ee0-4ea8-b145-1e2c4799ff2a"/>
-					<EmbedLooms url="https://www.loom.com/embed/03ecc69db68e40a5ae89a07a2508a653?sid=7a6ca9fc-b810-48b5-87a0-c8d75353b6f9"/>
-				</div>
-			</div> -->
+  {/*Proyectos*/}
+  <div id="proyectos" class="my-[10vh] z-10">
+    <h2 class="text-4xl font-semibold text-center">Proyectos</h2>
+    <br />
+    <br />
+    <Proyectos />
+  </div>
 
-			{/*Proyectos*/}
-			<div id="proyectos" class="my-[10vh] z-10">
-				<h2 class="text-4xl font-semibold text-center">Proyectos</h2>
-				<br>
-				<br>
-				<Proyectos />
-			</div>
-
-			{/*Testimonios*/}
-			<div id="testimonios" class="z-10 mb-10">
-				<h2 class="text-4xl font-semibold text-center">Testimonios</h2>
-				<br>
-				<br>
-				<Testimonials />
-			</div>
-
-			
-
-
-			<script is:inline src="/particles.min.js" />
-			<script is:inline src="/custom.js"></script>
-			<script>
-				import 'preline'
-			</script>
-		</body>		
-	</div>
-</html>
+  {/*Testimonios*/}
+  <div id="testimonios" class="z-10 mb-10">
+    <h2 class="text-4xl font-semibold text-center">Testimonios</h2>
+    <br />
+    <br />
+    <Testimonials />
+  </div>
+</Layout>

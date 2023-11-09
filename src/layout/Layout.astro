@@ -1,0 +1,31 @@
+---
+import NavBar from "../components/NavBar/navBar.astro";
+const { title } = Astro.props;
+---
+
+<html lang="en" class="bg-bg-black scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="stylesheet" href="https://use.typekit.net/qxr0uet.css" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+        <NavBar />
+        <div id="bg" class="z-0 w-[100vw] h-full fixed" />
+      <div class="flex flex-col items-center justify-start bg-bg-black min-h-screen p-6 text-white py-[15vh]">
+                  {/*Start Children*/}
+                  <slot />
+                  {/*End Children*/}
+      </div>
+        
+        <script is:inline src="/particles.min.js"></script>
+        <script is:inline src="/custom.js"></script>
+        <script>
+          import "preline";
+        </script>
+      </body>
+</html>
+      

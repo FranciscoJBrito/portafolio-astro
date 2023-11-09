@@ -1,0 +1,13 @@
+---
+import Layout from "../layout/Layout.astro";
+const AllPosts = await Astro.glob('./posts/*.md')
+import BlogCard from '../components/BlogCard/BlogCard.astro'
+---
+
+<Layout title="Blog">
+      {
+            AllPosts.map((post) => {
+                  return <BlogCard title={post.frontmatter.title} fecha={post.frontmatter.fecha} url={post.frontmatter.url}/>
+            })
+      }
+</Layout>
